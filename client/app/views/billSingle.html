@@ -1,0 +1,56 @@
+<section class="row">
+    <article class="col-md-12">
+        <h1><a href="{{bill.sources[0].url}}">{{bill.bill_id}}</a></h1>
+        <h2>Description</h2>
+        <p>{{bill.title}}</p>
+        <h2>Sponsors</h2>
+        <ul>
+            <li ng-repeat="sponsor in bill.sponsors">
+                <span>{{sponsor.name}}</span>
+            </li>
+        </ul>
+        <h2>Versions</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Link</th>
+                </tr>
+                <tr ng-repeat="pdf in bill.versions">
+                    <td>{{pdf.name}}</td>
+                    <td><a href="{{pdf.url}}">{{pdf.mimetype}}</a></td>
+                </tr>
+            </table>
+        </div>
+        <h2>Actions</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                </tr>
+                <tr ng-repeat="action in bill.actions">
+                    <td>{{action.action}}</td>
+                    <td>{{action.date}}</td>
+                </tr>
+            </table>
+        </div>
+        <h2>Votes</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Vote</th>
+                    <th>Yes Count</th>
+                    <th>No Count</th>
+                    <th>Other Count</th>
+                </tr>
+                <tr ng-repeat="vote in bill.votes">
+                    <td>{{vote.motion}} - {{vote.chamber}}</td>
+                    <td>{{vote.yes_count}}</td>
+                    <td>{{vote.no_count}}</td>
+                    <td>{{vote.other_count}}</td>
+                </tr>
+            </table>
+        </div>
+    </article>
+</section>

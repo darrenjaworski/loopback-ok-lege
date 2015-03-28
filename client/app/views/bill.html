@@ -1,0 +1,35 @@
+<section class="row">
+    <div class="col-md-12">
+        <h1>Bills</h1>
+        <div class="form-group">
+            <label for="nameInput">Search by name</label>
+            <input class="form-control" id="nameInput" placeholder="Enter name" ng-model="bill_id.bill_id">
+        </div>
+        <div class="form-group">
+            <label for="subjectInput">Search by subject</label>
+            <input class="form-control" id="subjectInput" placeholder="Enter subject" ng-model="subjects.subjects">
+        </div>
+        <!-- <div class="form-group">
+            <label for="actionInput">Search by actions</label>
+            <input class="form-control" id="actionInput" placeholder="Enter action" ng-model="actions.actions">
+        </div> -->
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-responsive" infinite-scroll="moreBills()">
+                <tr>
+                    <th style="width: 30%;">Bill Name</th>
+                    <th>Bill Subjects</th>
+                    <th>Bill Actions</th>
+                </tr>
+                <tr ng-repeat="bill in bills | filter:bill_id:strict | filter:subjects:strict | filter:actions:strict | limitTo:limitSize">
+                    <td><a href="#/bills/{{bill.id}}">{{bill.bill_id}}</a> - {{bill.title}}</td>
+                    <td>
+                        <span style="display: block;" ng-repeat="subjects in bill.subjects">{{subjects}}</span>
+                    </td>
+                    <td>
+                        <span style="display: block;" ng-repeat="actions in bill.actions">{{actions.action}}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,47 @@
+<section class="row">
+    <article class="col-md-12">
+        <h1>Introduction</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sed excepturi fuga magni ex porro eius quo, nostrum esse atque quasi eaque quos suscipit nobis libero a nihil voluptas, exercitationem!</p>
+    </article>
+</section>
+<section class="row">
+    <div class="col-md-6">
+        <h2>Bills</h2>
+        <p>Number of bills introduced: {{bills.count}}</p>
+        <p>Number of bills passed: </p>
+        <p>Number of bills signed into law: </p>
+    </div>
+    <div class="col-md-6">
+        <h2>Legislators</h2>
+        <p>Number of legislators: {{legislators.count}}</p>
+        <p>Number of house members: {{houseCount.count}}</p>
+        <p>Number of senators: {{senateCount.count}}</p>
+    </div>
+</section>
+<!-- <section class="row">
+    <article class="col-md-12">
+        <h2>Meet your legislators</h2>
+        <h3>House of Representatives<h3>
+        <div class="piclist">
+            <div ng-repeat="legislator in legislatorsFull" class="col-xs-6 col-md-3">
+                <a href="#/legislators/{{legislator.id}}" class="thumbnail" ng-class="{ 'dem': legislator.party == 'Democratic', 'rep': legislator.party == 'Republican'}">
+                    <img style="width: 100%;" src="{{legislator.photo_url}}" alt="{{legislator.full_name}}">
+                </a>
+            </div>
+        </div>
+        <h3>Senate<h3>
+        <div class="row piclist">
+            <div ng-repeat="legislator in legislatorsSenate" class="col-xs-6 col-md-3">
+                <a href="#/legislators/{{legislator.id}}" class="thumbnail" ng-class="{ 'dem': legislator.party == 'Democratic', 'rep': legislator.party == 'Republican'}">
+                    <img style="width: 100%;" src="{{legislator.photo_url}}" alt="{{legislator.full_name}}">
+                </a>
+            </div>
+        </div>
+    </article>
+</section> -->
+<!-- <section class="row">
+    <div class="col-md-12">
+        <h2>Oklahoma State Budget</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam sed excepturi fuga magni ex porro eius quo, nostrum esse atque quasi eaque quos suscipit nobis libero a nihil voluptas, exercitationem!</p>
+    </div>
+</section> -->

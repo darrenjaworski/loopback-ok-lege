@@ -1,0 +1,36 @@
+{
+  "name": "legislator",
+  "plural": "legislators",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "party": {
+      "type": "string"
+    },
+    "district": {
+      "type": "number"
+    },
+    "chamber": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "openstateid": {
+      "type": "string"
+    },
+    "photo_url": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,97 @@
+{
+  "name": "bill",
+  "plural": "bills",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "title": {
+      "type": "string",
+      "length": null,
+      "postgres": {
+        "dataType": "text",
+        "dataLength": 4000
+      }
+    },
+    "openstateid": {
+      "type": "string"
+    },
+    "chamber": {
+      "type": "string"
+    },
+    "bill_id": {
+      "type": "string"
+    },
+    "session": {
+      "type": "string"
+    },
+    "subjects": {
+      "type": [
+        "string"
+      ]
+    },
+    "votes": {
+      "type": [
+        "object"
+      ],
+      "length": 20000,
+      "postgres": {
+        "dataType": "text",
+        "dataLength": 20000
+      }
+    },
+    "actions": {
+      "type": [
+        "object"
+      ],
+      "length": 20000,
+      "postgres": {
+        "dataType": "text",
+        "dataLength": 20000
+      }
+    },
+    "sponsors": {
+      "type": [
+        "object"
+      ],
+      "length": 20000,
+      "postgres": {
+        "dataType": "text",
+        "dataLength": 20000
+      }
+    },
+    "versions": {
+      "type": [
+        "object"
+      ],
+      "length": 20000,
+      "postgres": {
+        "dataType": "text",
+        "dataLength": 20000
+      }
+    },
+    "documents": {
+      "type": [
+        "object"
+      ],
+      "length": 20000,
+      "postgres": {
+        "dataType": "text",
+        "dataLength": 20000
+      }
+    },
+    "sources": {
+      "type": [
+        "object"
+      ],
+      "length": 20000,
+      "postgres": {
+        "dataType": "text",
+        "dataLength": 20000
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
